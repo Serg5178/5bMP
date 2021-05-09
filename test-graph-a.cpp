@@ -31,10 +31,12 @@ int main()
     cout << "\n";
     cout << "Алгоритм Флери:\n";
     auto stack1 = flery_start(graph);
-    while (!stack1.empty())
-    {
-        cout << stack1.top() << " ";
-        stack1.pop();
+    if(stack1.empty()){
+        cout << "Нет эйлерова цикла";
+    } else {
+        for(auto i : stack1){
+            cout << i << " ";
+        }
     }
     cout << "\n";
     cout << "Алгоритм на основе циклов:\n";

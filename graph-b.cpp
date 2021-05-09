@@ -47,12 +47,23 @@ void search(size_t v, vector<vector<int>> &matrix, stack<size_t> &stack)
     stack.push(v);
 }
 
-stack<size_t> flery_start(adjacency_list g)
+vector<size_t> flery_start(adjacency_list g)
 {
     stack<size_t> temp;
     auto matrix = g.toMatrix();
     search(0, matrix, temp);
-    return temp;
+    std::vector<size_t> stack_contents;
+    while (!temp.empty())
+    {
+        stack_contents.push_back(temp.top());
+        temp.pop();
+    }
+    for(size_t i = 0; i < stack_contents.size()-1; i++){
+        if(stack_contents[i] == stack_contents[i+1]){
+            return std::vector<size_t>();
+        }
+    }
+    return stack_contents;
 }
 
 void cycle(adjacency_list graph)

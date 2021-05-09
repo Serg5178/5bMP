@@ -5,7 +5,7 @@ stack<int> dfs_start(adjacency_list graph);
 
 void search(size_t v, vector<vector<int>> &matrix, stack<size_t> &stack);
 
-stack<size_t> flery_start(adjacency_list g);
+vector<size_t> flery_start(adjacency_list g);
 
 void cycle(adjacency_list graph);
 
