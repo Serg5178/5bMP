@@ -9,7 +9,7 @@ gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
 Компилирование
 
 ```linux
-g++ test-graph-a.cpp graph-a.h
+g++ test-graph-a.cpp
 ```
 
 Вывод
